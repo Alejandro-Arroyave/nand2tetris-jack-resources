@@ -454,5 +454,23 @@ class Strings {
 
     return ret;
   }
+  
+  /**
+  * Invert the given String. Method made by Alejandro Arroyave Bedoya
+  * @param String to invert
+  * @return the string inverted
+  */
+  function String getInverse(String toInverse) {
+    var int len; var String ret;
+    let len = toInverse.length();
+    let ret = String.new(len);
+    let len = len - 1;
+    while(len > -1) {
+      let ret = ret.appendChar(toInverse.charAt(len));
+      let len = len - 1;
+    }
+    do toInverse.dispose();
+    return ret;
+  }
 
 }
